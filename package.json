@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^8.1.0",
     "@playwright/test": "^1.21.1"
   },
   "dependencies": {
     "redis": "^4.0.6"
+  },
+  "scripts": {
+    "cucumber-test": "./node_modules/.bin/cucumber-js --require tests/tools/cucumber.ts --require tests/specs/cucumber/stepDefinitions/**/*.ts --format html:tests/reports/cucumber_report.html --format summary --no-strict --publish-quiet tests/specs/cucumber/features/**/*.feature"
   }
 }
