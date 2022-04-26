@@ -1,19 +1,21 @@
 {
-  "name": "playwright-test-suite",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@cucumber/cucumber": "^8.1.0",
-    "@playwright/test": "^1.21.1"
-  },
-  "dependencies": {
-    "redis": "^4.0.6"
-  },
-  "scripts": {
-    "cucumber-test": "./node_modules/.bin/cucumber-js --require tests/tools/cucumber.ts --require tests/specs/cucumber/stepDefinitions/**/*.ts --format html:tests/reports/cucumber_report.html --format summary --no-strict --publish-quiet tests/specs/cucumber/features/**/*.feature"
-  }
+    "name": "playwright-test-suite",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cucumber/cucumber": "^8.1.0",
+        "@playwright/test": "^1.21.1",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.3"
+    },
+    "dependencies": {
+        "redis": "^4.0.6"
+    },
+    "scripts": {
+        "cucumber-test": "cucumber-js tests/specs/cucumber/features/**/*.feature --require-module ts-node/register --require tests/specs/cucumber/support/cucumber-setup.ts --require tests/specs/cucumber/stepDefinitions/**/*.ts --format html:tests/reports/cucumber_report.html --publish-quiet"
+    }
 }
