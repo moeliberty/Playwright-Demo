@@ -1,22 +1,22 @@
 {
-    "name": "playwright-test-suite",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@cucumber/cucumber": "^8.1.0",
-        "@cucumber/pretty-formatter": "^1.0.0-alpha.2",
-        "@playwright/test": "^1.21.1",
-        "ts-node": "^10.7.0",
-        "typescript": "^4.6.3"
-    },
-    "dependencies": {
-        "redis": "^4.0.6"
-    },
-    "scripts": {
-        "cucumber-test": "cucumber-js tests/specs/cucumber/features/**/*.feature --require-module ts-node/register -r tests/specs/cucumber/support/cucumber-setup.ts -r tests/specs/cucumber/stepDefinitions/**/*.ts -f html:tests/reports/cucumber_report.html -f @cucumber/pretty-formatter --publish-quiet"
-    }
+  "name": "playwright-test-suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.1.0",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.2",
+    "@playwright/test": "^1.23.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "redis": "^4.0.6"
+  },
+  "scripts": {
+    "cucumber-test": "cucumber-js tests/specs/cucumber/features/**/*.feature --require-module ts-node/register -r tests/specs/cucumber/support/cucumber-setup.ts -r tests/specs/cucumber/stepDefinitions/**/*.ts -f html:tests/reports/cucumber_report.html -f @cucumber/pretty-formatter --publish-quiet"
+  }
 }
